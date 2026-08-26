@@ -3,104 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robotic Store</title>
+    <title>Robotic Store - F-51</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
+        * {
+            box-sizing: border-box;
+        }
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f4f4f9; 
+            color: #333; 
+            margin: 0; 
+            padding: 15px; 
+            line-height: 1.6; 
+            width: 100%;
+        }
+        .container {
+            max-width: 1000px;
+            width: 100%;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
         }
-        header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+        header { 
+            display: flex; 
+            align-items: center; 
+            gap: 15px; 
+            border-bottom: 2px solid #ddd; 
+            padding-bottom: 15px; 
+            margin-bottom: 20px; 
+            width: 100%;
         }
-        header img {
-            width: 60px;
-            height: auto;
+        header img { 
+            width: 60px; 
+            height: auto; 
         }
-        h1 {
-            margin: 0;
-            color: #111;
+        h1 { 
+            margin: 0; 
+            color: #111; 
+            font-size: 24px;
         }
-        .product {
-            background: #fff;
-            border: 1px solid #ddd;
-            padding: 20px;
-            margin-bottom: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        .product-card, .section-box { 
+            background: #fff; 
+            border: 1px solid #ddd; 
+            border-radius: 8px; 
+            padding: 20px; 
+            margin-bottom: 25px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+            width: 100%;
         }
-        .product img {
+        .product-img { 
+            width: 100%; 
             max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            margin-top: 10px;
-            margin-bottom: 10px;
+            height: auto; 
+            border-radius: 4px; 
+            margin-top: 10px; 
+            margin-bottom: 15px; 
+            display: block; 
         }
-        .btn {
-            display: inline-block;
-            background: #ffc439;
-            color: #000;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-            margin-top: 15px;
-            border: 1px solid #e0a82e;
+        .price { 
+            font-size: 22px; 
+            color: #d9534f; 
+            font-weight: bold; 
+            margin: 15px 0; 
         }
-        .btn:hover {
-            background: #f4ba2f;
+        .btn { 
+            display: block; 
+            text-align: center;
+            background: #ffc439; 
+            color: #000; 
+            padding: 15px; 
+            text-decoration: none; 
+            font-size: 18px;
+            font-weight: bold; 
+            border-radius: 4px; 
+            margin-top: 20px; 
+            border: 1px solid #e0a82e; 
+            width: 100%;
+        }
+        .btn:hover { 
+            background: #f4ba2f; 
+        }
+        ul { 
+            padding-left: 20px; 
+        }
+        li { 
+            margin-bottom: 8px; 
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <img src="logo_red_triskelion (2) (2).png
-            " alt="Logo">
-        <h1>Robotic Store</h1>
-    </header>
+    <div class="container">
+        <header>
+            <img src="logo_red_triskelion (2) (2).png" alt="Logo">
+            <h1>Robotic Store</h1>
+        </header>
 
-    <p>Welcome to the Robotic Store—your home for advanced autonomous systems, FPV aircraft, and tactical gear.</p>
+        <p>Welcome to the Robotic Store—your home for advanced autonomous systems and tactical robotic gear.</p>
 
-    <!-- Product 1: F-51 -->
-    <div class="product">
-        <h2>( F-51 )</h2>
-        <p><strong>Price:</strong> $150.00 USD <em>(Plus $8 shipping & $3 handling)</em></p>
-        <p>Specially designed for low-altitude and mid-range FPV flight, featuring an optimized internal layout, quick-release detachable wings, twin motors, and LED navigation lights.</p>
-        
-        <h3>Product Gallery & Features</h3>
-        
-        <p><strong>Sleek Aerodynamic Design & Color Variants</strong></p>
-        <img src="2026-08-26-15-17-44-588.jpg" alt="Aerodynamic Overview">
-        <p>Featuring a high-performance twin-motor layout and streamlined airframe, the F-51 is designed for high-efficiency flight and is available in multiple color styles to suit your preference.</p>
+        <!-- Open Source & Universal AI Integration Section -->
+        <div class="section-box">
+            <h3>Why Our Open Source Ecosystem is Different</h3>
+            <p>Unlike locked-down commercial robots, our hardware is built entirely open source. You are never restricted to vendor applications.</p>
+            <ul>
+                <li><strong>Universal App Download:</strong> Use our companion control app to manage your hardware effortlessly.</li>
+                <li><strong>Bring Your Own LLM:</strong> Seamlessly integrate any Large Language Model, vision model, or custom script directly from Hugging Face, GitHub repositories, or local Ollama/LM Studio instances via standard API endpoints.</li>
+            </ul>
+        </div>
 
-        <p><strong>Detachable Wings & Multi-System FPV Nose</strong></p>
-        <img src="2026-08-26-11-39-57-209.jpg" alt="Detachable Wings">
-        <p>Engineered with a new quick-release clip design for fast, reliable wing installation, alongside a modular FPV nose compatible with multiple video systems including Avatar, O3, and Vista.</p>
+        <!-- F-51 Product Page -->
+        <div class="product-card">
+            <h2>( F-51 )</h2>
+            <div class="price">$150.00 USD</div>
+            <p>F-51 is an FPV aircraft with a 750mm wingspan with LED Navigation lights Twin Motor, designed for mid-range flying in low altitudes with easy take-off and landing.</p>
 
-        <p><strong>Built for the Field</strong></p>
-        <img src="2026-08-26-11-37-24-246.jpg" alt="Field View">
-        <p>Captured in its natural outdoor element, the F-51 combines rugged durability with agile handling for an exceptional real-world FPV flying experience.</p>
+            <h3>Product Gallery & Features</h3>
 
-        <p><strong>Precision Internal FPV Architecture</strong></p>
-        <img src="2026-08-26-11-24-52-520.jpg" alt="Internal Architecture">
-        <p>Specially designed for low-altitude and mid-range FPV flight, featuring an optimized internal layout with dedicated compartments for the battery, receiver, flight controller, GPS, and FPV nose.</p>
+            <p><strong>Sleek Aerodynamic Design & Color Variants</strong></p>
+            <img class="product-img" src="2026-08-26-15-17-44-588.jpg" alt="Aerodynamic Overview">
+            <p>Featuring a high-performance twin-motor layout and streamlined airframe, the F-51 is designed for high-efficiency flight and is available in multiple color styles to suit your preference.</p>
 
-        <p><strong>Comprehensive Electronics & Controller Kit</strong></p>
-        <img src="2026-08-26-11-20-54-130.jpg" alt="Electronics Kit">
-        <p>Comes fully equipped with essential hardware components including a high-grade remote controller, receiver unit, antenna, wiring harnesses, and modular FPV camera system.</p>
+            <p><strong>Detachable Wings & Multi-System FPV Nose</strong></p>
+            <img class="product-img" src="2026-08-26-11-39-57-209.jpg" alt="Detachable Wings">
+            <p>Engineered with a new quick-release clip design for fast, reliable wing installation, alongside a modular FPV nose compatible with multiple video systems including Avatar, O3, and Vista.</p>
 
-        <br>
-        <a href="https://www.paypal.com/ncp/payment/DMXK9T29LJSKA" class="btn">Order Now - F-51 ($150.00)</a>
+            <p><strong>Built for the Field</strong></p>
+            <img class="product-img" src="2026-08-26-11-37-24-246.jpg" alt="Field View">
+            <p>Captured in its natural outdoor element, the F-51 combines rugged durability with agile handling for an exceptional real-world FPV flying experience.</p>
+
+            <p><strong>Precision Internal FPV Architecture</strong></p>
+            <img class="product-img" src="2026-08-26-11-24-52-520.jpg" alt="Internal Architecture">
+            <p>Specially designed for low-altitude and mid-range FPV flight, featuring an optimized internal layout with dedicated compartments for the battery, receiver, flight controller, GPS, and FPV nose, accessible via individual hatches for easy installation.</p>
+
+            <p><strong>Comprehensive Electronics & Controller Kit</strong></p>
+            <img class="product-img" src="2026-08-26-11-20-54-130.jpg" alt="Electronics Kit">
+            <p>Comes fully equipped with essential hardware components including a high-grade remote controller, receiver unit, antenna, wiring harnesses, and modular FPV camera system for a complete out-of-the-box setup.</p>
+
+            <br>
+            <a href="https://www.paypal.com/ncp/payment/DMXK9T29LJSKA" class="btn">Order Now - F-51 ($150.00)</a>
+        </div>
     </div>
 
 </body>
